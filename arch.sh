@@ -5,9 +5,10 @@ lsblk
 echo "select drive"
 read DRIVE
 fdisk $DRIVE
-while [ $MKFSYN == 0 ]
+read MKFSYN
+while [ $MKFSYN == "y" ]
 do
-	read MKFSYN
+	read $MKFSYN
 	if [ $MKYN == y ]
 	then
 		read PNUM
