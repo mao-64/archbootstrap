@@ -1,6 +1,5 @@
 #!/bin/sh
 
-read USER
 #timedatectl set-ntp true
 lsblk
 echo "select drive"
