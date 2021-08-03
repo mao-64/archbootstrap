@@ -1,6 +1,6 @@
 #!/bin/sh
 
 read DEV
-wipfs --all $DEV
+wipefs --all $DEV
 lsblk
 echo "DONE"
