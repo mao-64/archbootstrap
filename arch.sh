@@ -1,5 +1,6 @@
 #!/bin/sh
 
+read USER
 #timedatectl set-ntp true
 lsblk
 echo "select drive"
@@ -21,4 +22,6 @@ pacstrap /mnt base base-devel linux linux-firmware vim grub
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
+cp arch2.sh /mnt/arch2.sh
 
+arch-chroot /mnt
