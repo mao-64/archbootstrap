@@ -17,10 +17,12 @@ mkdir /mnt/home
 mount $DRIVE"1" /mnt/boot
 mount $DRIVE"4" /mnt/home
 
-pacstrap /mnt base base-devel linux linux-firmware vim grub
+pacstrap /mnt base base-devel linux linux-firmware
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
 cp arch2.sh /mnt/arch2.sh
+
+echo $DRIVE >> /mnt/tmp/archD
 
 arch-chroot /mnt
