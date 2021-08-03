@@ -10,7 +10,7 @@ while [ $MKFSYN == "y" ]
 do
 	echo "MKFSYN"
 	read $MKFSYN
-	if [ $MKYN == y ]
+	if [ $MKYN == "y" ]
 	then
 		echo "PNUM"
 		read PNUM
