@@ -3,10 +3,11 @@
 echo "this is arch2.sh you are chrooted"
 ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 hwclock --systohc
-echo "en_US.UTF-8 UTF-8  " >> /etc/locale.gen
-locale-gen
-touch /etc/locale.conf
+
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+echo "en_US ISO-8859-1" >> /etc/locale.gen
+locale-gen
 
 read PCNAME
 echo $PCNAME >> /etc/hostname
