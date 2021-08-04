@@ -23,7 +23,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 cp arch2.sh /mnt/arch2.sh
 
-touch /mnt/tmp/archD
-echo $DRIVE > /mnt/tmp/archD
+touch /mnt/archD
+echo $DRIVE >> /mnt/archD
 
 arch-chroot /mnt
