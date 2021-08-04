@@ -9,6 +9,7 @@ echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "en_US ISO-8859-1" >> /etc/locale.gen
 locale-gen
 
+echo "PC NAME"
 read PCNAME
 echo $PCNAME >> /etc/hostname
 
@@ -16,7 +17,7 @@ passwd
 
 pacman -S grub networkManager vim
 
-DRIVE=$(cat /tmp/archD)
+DRIVE=$(cat archD)
 
 grub-install --target=i386-pc $DRIVE
 grub-mkconfig -o /boot/grub/grub.cfg
