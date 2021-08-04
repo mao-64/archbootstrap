@@ -15,7 +15,9 @@ echo $PCNAME >> /etc/hostname
 
 passwd
 
-pacman -S grub networkManager vim
+echo "pacman start"
+pacman -Syu grub networkManager vim
+echo "pacman end"
 
 DRIVE=$(cat archD)
 

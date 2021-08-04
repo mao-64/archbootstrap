@@ -23,7 +23,6 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 cp arch2.sh /mnt/arch2.sh
 
-touch archD
 echo $DRIVE >> archD
 
 cp archD /mnt/archD
